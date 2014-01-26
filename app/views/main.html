@@ -20,9 +20,17 @@
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
 
-    <ol>
-      <li ng-repeat="entry in timelineEntries">{{ entry }}</li>
-    </ol>
+    <div id="peopleList">
+      <h2>People</h2>
+
+      <ul class="list-group">
+        <li ng-repeat="entry in timelineEntries" class="list-group-item">
+          {{ entry.name }}
+          <button type="button" class="close pull-right" aria-hidden="true">&times;</button>
+        </li>
+      </ul>
+
+    </div>
   </div>
 
   <div class="col-md-9">
